@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:id="@+id/library"
+        android:checkableBehavior="single">
+
+        <item android:id="@+id/music_library_navigation"
+            android:icon="@drawable/music_library"
+            android:title="@string/music_library"
+            android:checked="false" />
+
+        <item android:id="@+id/folders_navigation"
+            android:icon="@drawable/folders_icon"
+            android:title="@string/folders"
+            android:checked="false"/>
+
+    </group>
+
+    <group
+        android:id="@+id/settings_and_effects"
+        android:checkableBehavior="none">
+
+        <item android:id="@+id/audio_effects_navigation"
+            android:icon="@drawable/audio_effects_icon"
+            android:title="@string/audio_effects"
+            android:checked="false"/>
+
+        <item android:id="@+id/settings_navigation"
+            android:icon="@drawable/settings_icon"
+            android:title="@string/settings"
+            android:checked="false"/>
+
+    </group>
+</menu>

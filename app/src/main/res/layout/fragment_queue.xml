@@ -1,0 +1,91 @@
+<androidx.percentlayout.widget.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_heightPercent="30%"
+        android:id="@+id/relative_layout">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/album_art"
+            android:alpha="0.2"
+            android:scaleType="centerCrop"
+            android:id="@+id/now_playing_detail_background_album_art"/>
+
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:srcCompat="@drawable/album_art"
+            android:scaleType="centerCrop"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:id="@+id/album_art_queue"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"/>
+
+        <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/queue_length"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:layout_marginBottom="@dimen/activity_vertical_margin" />
+
+        <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/artist_name_queue"
+            android:layout_below="@+id/song_name_queue"
+            android:textSize="@dimen/artist_name_size"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:layout_toRightOf="@+id/album_art_queue"
+            android:layout_toEndOf="@+id/album_art_queue"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin" />
+
+        <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/song_name_queue"
+            android:textSize="@dimen/song_name_size"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:layout_alignLeft="@+id/artist_name_queue"
+            android:layout_alignStart="@+id/artist_name_queue"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_queue"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        app:layout_heightPercent="70%"
+        android:scrollbars="vertical"
+        android:layout_below="@+id/relative_layout" />
+
+
+</androidx.percentlayout.widget.PercentRelativeLayout>

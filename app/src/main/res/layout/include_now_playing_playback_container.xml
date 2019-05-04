@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.percentlayout.widget.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+        <RelativeLayout
+            app:layout_heightPercent="33%"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:id="@+id/duration_container">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Text"
+                android:id="@+id/start_duration"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:textSize="@dimen/duration_size"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/seperator"
+                android:text="@string/separator"
+                android:layout_toEndOf="@+id/start_duration"
+                android:layout_toRightOf="@+id/start_duration"
+                android:layout_alignBaseline="@+id/start_duration"
+                android:layout_marginLeft="3dp"
+                android:layout_marginStart="3dp"
+                android:layout_marginRight="3dp"
+                android:layout_marginEnd="3dp"
+                android:textSize="@dimen/duration_size"
+                android:layout_centerInParent="true"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Text"
+                android:id="@+id/end_duration"
+                android:layout_alignBaseline="@+id/start_duration"
+                android:layout_toRightOf="@+id/seperator"
+                android:layout_toEndOf="@+id/seperator"
+                android:textSize="@dimen/duration_size"
+                android:layout_centerInParent="true"/>
+
+        </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_height="match_parent"
+        app:layout_heightPercent="25%"
+        android:layout_width="match_parent"
+        android:id="@+id/seekBar_container"
+        android:layout_below="@+id/duration_container">
+
+        <SeekBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/seekBar"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        app:layout_heightPercent="42%"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/seekBar_container">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/controls_container"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:layout_centerInParent="true">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/shuffle_repeat_size"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/shuffle"
+                android:id="@+id/shuffle"
+                android:contentDescription="@string/label_shuffle"
+                android:background="?selectableItemBackgroundBorderless"
+                android:layout_gravity="center" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/playback_controls_size"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/back"
+                android:contentDescription="@string/label_back"
+                android:background="?selectableItemBackgroundBorderless"
+                android:id="@+id/back"
+                android:layout_gravity="center" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/playback_controls_size"
+                android:layout_weight="1"
+                android:id="@+id/play_or_pause"
+                app:srcCompat="@drawable/play"
+                android:contentDescription="@string/label_play_pause"
+                android:background="?selectableItemBackgroundBorderless"
+                android:layout_gravity="center" />
+
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/playback_controls_size"
+                android:layout_weight="1"
+                android:id="@+id/forward"
+                app:srcCompat="@drawable/forward"
+                android:contentDescription="@string/label_forward"
+                android:background="?selectableItemBackgroundBorderless"
+                android:layout_gravity="center" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/shuffle_repeat_size"
+                android:layout_weight="1"
+                android:id="@+id/repeat"
+                app:srcCompat="@drawable/repeat"
+                android:contentDescription="@string/label_repeat"
+                android:background="?selectableItemBackgroundBorderless"
+                android:layout_gravity="center" />
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</androidx.percentlayout.widget.PercentRelativeLayout>

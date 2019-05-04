@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "724933178468",
+    "firebase_url": "https://aura-music-player.firebaseio.com",
+    "project_id": "aura-music-player",
+    "storage_bucket": "aura-music-player.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:724933178468:android:e5f024e70c865af2",
+        "android_client_info": {
+          "package_name": "reverblabs.apps.aura"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "724933178468-m3ki22kthkouuuh9d2h44j99v9tblrkk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "reverblabs.apps.aura",
+            "certificate_hash": "434660687461A2AB228F4C42849798387A4013E9"
+          }
+        },
+        {
+          "client_id": "724933178468-08m713lk0tuh1mdmn6binjugbland7g4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAIfSZWTmYA6WS9Vc-lBXokEDntShbCrj8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "724933178468-08m713lk0tuh1mdmn6binjugbland7g4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

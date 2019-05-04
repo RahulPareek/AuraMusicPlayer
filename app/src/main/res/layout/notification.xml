@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="64dp"
+    android:orientation="horizontal"
+    android:background="@color/colorPrimary">
+
+    <ImageView
+        android:layout_width="64dp"
+        android:layout_height="match_parent"
+        app:srcCompat="@drawable/album_art"
+        android:id="@+id/album_art_notification"
+        android:scaleType="centerCrop"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@+id/album_art_notification"
+        android:layout_toEndOf="@+id/album_art_notification"
+        android:layout_toStartOf="@+id/notification_controls"
+        android:layout_toLeftOf="@+id/notification_controls"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp">
+
+        <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/song_name_notification"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textColor="@color/windowBackground"
+            android:layout_marginTop="8dp"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
+
+        <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/artist_name_notification"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textColor="@color/windowBackground"
+            android:layout_below="@+id/song_name_notification"
+            android:layout_marginTop="3dp"
+            android:layout_toLeftOf="@+id/notification_duration"
+            android:layout_toStartOf="@+id/notification_duration"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small"/>
+
+        <Chronometer
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/notification_duration"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small"
+            android:layout_gravity="bottom"
+            android:layout_marginRight="2dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginStart="2dp"
+            android:layout_alignBaseline="@+id/artist_name_notification"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"/>
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_toLeftOf="@+id/cancel_notification"
+        android:layout_toStartOf="@+id/cancel_notification"
+        android:id="@+id/notification_controls">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@android:drawable/ic_media_previous"
+            android:id="@+id/notification_back"
+            android:layout_gravity="center"
+            android:contentDescription="@string/label_back"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/notification_play"
+            android:id="@+id/notification_play_or_pause"
+            android:layout_gravity="center"
+            android:contentDescription="@string/label_play_pause"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@android:drawable/ic_media_next"
+            android:id="@+id/notification_forward"
+            android:layout_gravity="center"
+            android:contentDescription="@string/label_forward"/>
+
+    </LinearLayout>
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            app:srcCompat="@android:drawable/ic_menu_close_clear_cancel"
+            android:id="@+id/cancel_notification"
+            android:layout_marginRight="2dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginTop="2dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"/>
+
+
+</RelativeLayout>

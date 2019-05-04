@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/navigation_drawer_image_height">
+    
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/navigation_drawer_image_height"
+        android:id="@+id/navigation_drawer_image"
+        android:src="@drawable/nav_drawer"
+        android:scaleType="centerCrop"/>
+
+</RelativeLayout>

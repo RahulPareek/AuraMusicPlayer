@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+    android:minWidth="@dimen/widget_large_album_art_width"
+    android:minHeight="@dimen/widget_large_album_art_height"
+    android:initialLayout="@layout/widget_large_album_art"
+    android:previewImage="@drawable/widget_resizable"
+    android:resizeMode="horizontal|vertical">
+
+</appwidget-provider>

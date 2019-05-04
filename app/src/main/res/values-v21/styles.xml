@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="NoActionBarTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/windowBackground</item>
+        <item name="android:textColor">@color/TextColor</item>
+
+        <item name="android:actionOverflowButtonStyle">@style/Overflow</item>
+
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+
+        <item name="windowActionModeOverlay">true</item>
+        <item name="android:actionModeBackground">@drawable/action_mode_color</item>
+        <item name="actionModeStyle">@style/Widget.ActionMode</item>
+        <item name="android:actionModeCloseDrawable">@drawable/navigation_back</item>
+
+        <item name="android:listDivider">@color/windowBackground</item>
+
+    </style>
+
+    
+</resources>

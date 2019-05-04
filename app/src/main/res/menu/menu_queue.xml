@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/play_next_queue"
+        android:title="@string/play_next"/>
+
+    <item android:id="@+id/go_to_artist_queue"
+        android:title="@string/go_to_artist"/>
+
+    <item android:id = "@+id/go_to_album_queue"
+        android:title="@string/go_to_album"/>
+
+    <item android:id="@+id/remove_queue"
+        android:title="@string/remove"/>
+
+</menu>

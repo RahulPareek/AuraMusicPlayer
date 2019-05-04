@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#1F2532</color>
+    <color name="colorPrimaryDark">#1F2532</color>
+    <color name="colorAccent">#E91E63</color>
+
+    <color name="windowBackground">#F2F2F2</color>
+    <color name="TextColor">#616161</color>
+    <color name="nonSelectedText">#787E89</color>
+    <color name="white">#FFFFFF</color>
+
+    <color name="textBlack">#212121</color>
+
+    <color name="recycler_state">#BDBDBD</color>
+
+    <color name="now_playing_toolbar">#10000000</color>
+
+    <color name="transparent_background">#60000000</color>
+    
+</resources>

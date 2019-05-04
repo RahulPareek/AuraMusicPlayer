@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="@string/audio">
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:title="@string/equalizer"
+            android:key="equalizer"
+            android:summary="@string/equalizer_summary"/>
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="pause_audio"
+            android:title="@string/pause_audio"
+            android:summary="@string/pause_audio_summary" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/artwork">
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:title="@string/download_artwork"
+            android:key="download_artwork"/>
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:title="@string/download_artist_images"
+            android:key="download_artist_images"/>
+
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:title="@string/only_over_wifi"
+            android:summary="@string/only_over_wifi_summary"
+            android:key="only_over_wifi"/>
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:title="@string/ignore_mediastore_artwork"
+            android:summary="@string/ignore_mediastore_artwork_summary"
+            android:key="ignore_album_art"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/delete">
+
+        <Preference
+            android:title="@string/delete"
+            android:summary="@string/delete_summary"
+            android:key="delete_cache"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/about">
+
+        <Preference
+            android:title="@string/version"/>
+
+    </PreferenceCategory>
+
+
+
+</PreferenceScreen>

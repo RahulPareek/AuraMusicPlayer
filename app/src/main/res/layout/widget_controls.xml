@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/widget_back"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/widget_playback_controls_size"
+        android:layout_weight="1"
+        android:background="?android:selectableItemBackground"
+        app:srcCompat="@drawable/notification_back"
+        android:layout_gravity="center"
+        android:contentDescription="@string/label_back"/>
+
+    <ImageView
+        android:id="@+id/widget_play_or_pause"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/widget_playback_controls_size"
+        android:layout_weight="1"
+        android:background="?android:selectableItemBackground"
+        app:srcCompat="@drawable/notification_play"
+        android:layout_gravity="center"
+        android:contentDescription="@string/label_play_pause"/>
+
+    <ImageView
+        android:id="@+id/widget_forward"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/widget_playback_controls_size"
+        android:layout_weight="1"
+        android:background="?android:selectableItemBackground"
+        app:srcCompat="@drawable/notification_forward"
+        android:layout_gravity="center"
+        android:contentDescription="@string/label_forward"/>
+
+</LinearLayout>

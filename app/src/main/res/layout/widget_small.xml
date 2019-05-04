@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/widget_small_height"
+    android:background="@color/transparent_background"
+    android:columnCount="2"
+    android:rowCount="3"
+    tools:ignore="ContentDescription" >
+
+    <LinearLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/widget_small_album_art_size"
+            android:layout_height="match_parent"
+            android:id="@+id/widget_small_album_art"/>
+
+        <LinearLayout
+            android:id="@+id/app_widget_text_container"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingLeft="5dp"
+            android:paddingStart="5dp"
+            android:paddingRight="5dp"
+            android:paddingEnd="5dp">
+
+            <TextView
+                android:id="@+id/widget_small_song_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="marquee"
+                android:singleLine="true"
+                android:textStyle="bold"
+                android:visibility="invisible"/>
+
+            <TextView
+                android:id="@+id/widget_small_artist_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="marquee"
+                android:singleLine="true"
+                android:visibility="invisible"/>
+
+        </LinearLayout>
+
+        <include layout="@layout/widget_controls"/>
+
+    </LinearLayout>
+
+
+</GridLayout>

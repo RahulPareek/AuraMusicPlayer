@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/list_start_end_margin"
+    android:layout_marginEnd="@dimen/list_start_end_margin"
+    android:layout_marginBottom="@dimen/list_bottom_margin"
+    tools:context=".ui.adapters.song.CustomAdapterToListSongs"
+    android:background="@drawable/recyclerview_state_drawable"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <ImageView
+        android:id="@+id/album_art"
+        android:layout_width="@dimen/list_album_art_width"
+        android:layout_height="@dimen/list_album_art_height"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/album_art_song_name_padding"
+        android:layout_marginLeft="@dimen/album_art_song_name_padding"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textAppearance="@style/TextAppearance.Title"
+        android:textColor="@color/textBlack"
+        app:layout_constraintStart_toEndOf="@+id/album_art"
+        app:layout_constraintEnd_toStartOf="@+id/duration"
+        app:layout_constraintBottom_toTopOf="@+id/center_guideline"/>
+
+    <TextView
+        android:id="@+id/subtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/album_art_song_name_padding"
+        android:layout_marginLeft="@dimen/album_art_song_name_padding"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textAppearance="@style/TextAppearance.SubTitle"
+        app:layout_constraintStart_toEndOf="@+id/album_art"
+        app:layout_constraintEnd_toStartOf="@+id/duration"
+        app:layout_constraintTop_toBottomOf="@+id/center_guideline"/>
+
+    <TextView
+        android:id="@+id/duration"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="0:00"
+        android:textAppearance="@style/TextAppearance.SubTitle"
+        app:layout_constraintEnd_toStartOf="@id/overflow"
+        app:layout_constraintTop_toTopOf="@+id/center_guideline"
+        app:layout_constraintBottom_toBottomOf="@+id/center_guideline"/>
+
+    <ImageView
+        android:layout_width="@dimen/overflow_width"
+        android:layout_height="@dimen/overflow_height"
+        android:id="@+id/overflow"
+        app:layout_constraintTop_toTopOf="@+id/center_guideline"
+        app:layout_constraintBottom_toBottomOf="@+id/center_guideline"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/center_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

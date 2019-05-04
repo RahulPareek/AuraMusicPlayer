@@ -1,0 +1,76 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bottom_bar_height"
+            android:id="@+id/bottom_bar"
+            android:layout_alignParentBottom="true">
+
+            <ImageView
+                android:layout_width="@dimen/bottom_bar_height"
+                android:layout_height="match_parent"
+                android:id="@+id/album_art_bottom"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/album_art"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_toRightOf="@+id/album_art_bottom"
+                android:layout_toEndOf="@+id/album_art_bottom">
+
+                <ProgressBar
+                    android:layout_width="match_parent"
+                    android:max="100"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/progress_bar"
+                    android:layout_marginTop="-6.9dp"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id ="@+id/song_name_bottom"
+                    android:textSize="@dimen/song_name_size"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:layout_marginStart="@dimen/playback_controls_padding"
+                    android:layout_marginLeft="@dimen/playback_controls_padding"
+                    android:layout_marginRight="50dp"
+                    android:layout_marginEnd="50dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/artist_name_bottom"
+                    android:ellipsize="end"
+                    android:textSize="@dimen/artist_name_size"
+                    android:maxLines="1"
+                    android:layout_marginStart="@dimen/playback_controls_padding"
+                    android:layout_marginLeft="@dimen/playback_controls_padding"
+                    android:layout_marginRight="50dp"
+                    android:layout_marginEnd="50dp"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="@dimen/bottom_bar_play_pause_size"
+                android:layout_height="@dimen/bottom_bar_play_pause_size"
+                android:id="@+id/play_or_pause_bottom"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="@dimen/activity_vertical_margin"
+                android:layout_marginEnd="@dimen/activity_vertical_margin" />
+
+
+        </RelativeLayout>
+
+
+</RelativeLayout>

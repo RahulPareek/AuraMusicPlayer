@@ -1,0 +1,84 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".ui.adapters.artist.AdapterForArtist">
+
+    <com.google.android.material.card.MaterialCardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/card_view_padding"
+        android:layout_marginStart="@dimen/card_view_padding"
+        android:layout_marginRight="@dimen/card_view_padding"
+        android:layout_marginEnd="@dimen/card_view_padding"
+        android:layout_marginTop="@dimen/card_view_padding"
+        android:layout_marginBottom="@dimen/card_view_padding"
+        card_view:cardElevation="3dp"
+        card_view:cardCornerRadius="3dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/card_view_image_height"
+                android:id="@+id/artist_card_image"
+                android:scaleType="centerCrop"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="New Text"
+                android:id="@+id/card_artist_name"
+                android:singleLine="true"
+                android:background="@android:color/white"
+                android:ellipsize="marquee"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:paddingLeft="@dimen/card_view_text_padding"
+                android:paddingStart="@dimen/card_view_text_padding"
+                android:paddingEnd="@dimen/card_view_text_padding"
+                android:paddingRight="@dimen/card_view_text_padding"
+                android:layout_marginTop="@dimen/card_view_padding"
+                android:layout_below="@+id/artist_card_image"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:id="@+id/artist_no_of_songs_albums"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:paddingLeft="@dimen/card_view_text_padding"
+                android:paddingStart="@dimen/card_view_text_padding"
+                android:paddingEnd="@dimen/card_view_text_padding"
+                android:paddingRight="@dimen/card_view_text_padding"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/card_artist_name"
+                android:layout_marginBottom="@dimen/card_view_padding"/>
+
+
+            <ImageView
+                android:layout_width="@dimen/overflow_width"
+                android:layout_height="@dimen/overflow_height"
+                app:srcCompat="@drawable/overflow"
+                android:id="@+id/overflow_artist"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/card_view_padding"/>
+
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+</LinearLayout>
+

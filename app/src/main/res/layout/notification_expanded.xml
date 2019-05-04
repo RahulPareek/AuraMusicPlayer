@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:background="@color/colorPrimary">
+
+    <ImageView
+        android:id="@+id/album_art_notification_expanded"
+        android:layout_width="@dimen/notification_album_art_width"
+        android:layout_height="@dimen/notification_album_art_height"
+        app:srcCompat="@drawable/album_art"
+        android:scaleType="centerCrop"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center_vertical"
+        android:paddingLeft="8dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:paddingRight="8dp"
+        android:layout_toLeftOf="@+id/cancel_notification_expanded"
+        android:layout_toStartOf="@+id/cancel_notification_expanded"
+        android:layout_toRightOf="@+id/album_art_notification_expanded"
+        android:layout_toEndOf="@+id/album_art_notification_expanded"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:id="@+id/song_name_notification_expanded"
+            android:text="TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:textColor="@color/windowBackground"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"/>
+
+        <TextView
+            android:id="@+id/artist_name_notification_expanded"
+            android:text="TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:textColor="@color/windowBackground"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small"/>
+
+        <TextView
+            android:id="@+id/album_name_notification_expanded"
+            android:text="TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:textColor="@color/windowBackground"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small"/>
+
+
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_toRightOf="@id/album_art_notification_expanded"
+        android:layout_toEndOf="@id/album_art_notification_expanded"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/notification_controls">
+
+        <ImageView
+            android:id="@+id/notification_back_expanded"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/notification_button_width_height"
+            app:srcCompat="@drawable/notification_back"
+            android:layout_weight="1"
+            android:padding="10dp" />
+
+        <ImageView
+            android:id="@+id/notification_play_or_pause_expanded"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/notification_button_width_height"
+            app:srcCompat="@drawable/notification_play"
+            android:layout_weight="1"
+            android:padding="10dp" />
+
+        <ImageView
+            android:id="@+id/notification_forward_expanded"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/notification_button_width_height"
+            app:srcCompat="@drawable/notification_forward"
+            android:scaleType="fitCenter"
+            android:layout_weight="1"
+            android:padding="10dp"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:srcCompat="@drawable/notification_cancel"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:id="@+id/cancel_notification_expanded"
+        android:padding="3dp"/>
+
+
+
+    <Chronometer
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="9dp"
+        android:layout_marginEnd="9dp"
+        android:layout_above="@+id/notification_controls"
+        android:id="@+id/notification_duration"
+        android:layout_marginBottom="12dp"
+        android:textSize="15sp"
+        android:textColor="@color/windowBackground"/>
+
+
+</RelativeLayout>
